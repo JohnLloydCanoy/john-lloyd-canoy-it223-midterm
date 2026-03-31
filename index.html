@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Lloyd D. Canoy - Resume</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><button id="theme-toggle">Toggle Dark Mode</button></li>
+        </ul>
+    </nav>
+
+    <header id="about">
+        <img src="assets/profile.jpg" alt="John Lloyd D. Canoy Profile Picture" id="profile-img">
+        <h1 id="greeting-name">John Lloyd D. Canoy</h1>
+        <p>BS Information Technology | Major in Database Systems</p>
+        <p>Cagayan de Oro City, Philippines | canoy.john@gmail.com</p>
+        <p id="dynamic-greeting"></p>
+    </header>
+
+    <section id="education">
+        <h2>Education</h2>
+        <h3>University of Science and Technology of Southern Philippines - Cagayan De Oro (USTP-CDO)</h3>
+        <p>Bachelor of Science in Information Technology (Expected 2028)</p>
+        <p>Major in Database Systems</p>
+        <p>Relevant Coursework: Database Management Systems, Software Engineering, Data Structures & Algorithms</p>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li><strong>Languages:</strong> Python, Java, JavaScript, SQL, TypeScript, Rust</li>
+            <li><strong>Frameworks:</strong> Next.js, React, Tailwind CSS, Spring Boot, Laravel, Django, Express, Vite</li>
+            <li><strong>Tools:</strong> Git, Supabase, Docker, MySQL, PostgreSQL, Linux, VS Code, Figma, MongoDB</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Project A.N.I.</h3>
+            <p>AI-driven platform modernizing agricultural supply chains utilizing Streamlit and Supabase.</p>
+        </div>
+        <div class="project-card">
+            <h3>Automated Social Analytics Platform (ASAP)</h3>
+            <p>AI-powered analytics tool that automates social media reporting using Next.js, Supabase, and FastAPI.</p>
+        </div>
+        <div class="project-card">
+            <h3>Warehouse Inventory Management System</h3>
+            <p>Full-stack inventory tracking system built with Next.js, Django, and MySQL to solve "ghost inventory" issues.</p>
+        </div>
+
+        <div id="extra-projects" style="display: none;">
+            <div class="project-card">
+                <h3>StayNet</h3>
+                <p>Robust booking algorithm and interface using Vite, React, Java, TypeScript, and Supabase.</p>
+            </div>
+            <div class="project-card">
+                <h3>DocuLens</h3>
+                <p>High-precision PDF parser built with Java and JavaFX.</p>
+            </div>
+        </div>
+        <button id="toggle-projects-btn">View More Projects</button>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <span class="error-msg" id="name-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <span class="error-msg" id="email-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+                <span class="error-msg" id="message-error"></span>
+            </div>
+            <button type="submit">Send Message</button>
+            <p id="form-success-msg" style="display: none; color: green; margin-top: 10px;">Message sent successfully!</p>
+        </form>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
