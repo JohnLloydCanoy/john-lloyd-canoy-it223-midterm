@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+/* Main Container of Layout */
+body > div{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+div > main{
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;  
+}
