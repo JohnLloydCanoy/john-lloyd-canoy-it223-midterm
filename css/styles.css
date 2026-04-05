@@ -1,3 +1,4 @@
+/* Reset and Base Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,28 +12,27 @@ body {
     background-color: #f4f4f9;
 }
 
-/* Main Container of Layout */
-body > div{
+/* Main Container Layout */
+body > div {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-div > main{
-flex: 1;
+div > main {
+    flex: 1;
     max-width: 900px;
     width: 100%;
     margin: 30px auto;
     background: #ffffff;
     padding: 40px 50px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(8, 109, 139, 0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* Navigation */
-
+/* Navigation Header */
 header {
-    background-color: #051d35;
+    background-color: #2c3e50;
     color: #ffffff;
     padding: 25px 20px;
     text-align: center;
@@ -68,21 +68,59 @@ nav a {
 }
 
 nav a:hover {
-    color: #00d9ff;
+    color: #3498db;
 }
 
-section {
+/* --- CLASSES --- */
+
+/* Reusable section formatting */
+.resume-section {
     margin-bottom: 45px;
     padding-bottom: 30px;
     border-bottom: 1px solid #eaeaea;
 }
 
-section:last-of-type {
+.resume-section:last-of-type {
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
+/* Reusable list styling for details */
+.item-list {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.item-list li {
+    margin-bottom: 10px;
+}
+
+/* Reusable primary button styling */
+.btn-primary {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}
+
+/* ---------------- */
+
+/* Typography & Headers */
 h2 {
     color: #2c3e50;
     margin-bottom: 20px;
@@ -100,8 +138,8 @@ h3 {
     font-size: 1.2rem;
 }
 
-/* Home Section */
-#home {
+/* Home / Hero Section (Overrides the standard resume-section borders) */
+#home.resume-section {
     text-align: center;
     border-bottom: none;
 }
@@ -127,32 +165,22 @@ h3 {
     object-fit: cover;
 }
 
-ul {
-    margin-left: 20px;
-    margin-bottom: 15px;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
+/* Projects specific layout */
 #projects div {
     margin-bottom: 25px;
 }
 
 #projects em {
-    color: #0b811e;
+    color: #052855;
     font-size: 0.95rem;
 }
 
-
-/* Contact Form Styles */
-#contact ul {
+/* Contact Form Specifics */
+#contact .item-list {
     list-style: none;
     margin-left: 0;
     margin-bottom: 30px;
 }
-
 
 #contact a {
     color: #3498db;
@@ -201,27 +229,6 @@ textarea:focus {
     box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
 }
 
-button[type="submit"] {
-    background-color: #3498db;
-    color: #ffffff;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-}
-
-button[type="submit"]:hover {
-    background-color: #2980b9;
-}
-
-button[type="submit"]:active {
-    transform: translateY(1px);
-}
-
 /* Footer */
 footer {
     text-align: center;
@@ -230,7 +237,6 @@ footer {
     background-color: #2c3e50;
     color: #ecf0f1;
 }
-
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
