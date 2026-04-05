@@ -19,8 +19,12 @@ body > div{
 }
 
 div > main{
-    flex: 1;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;  
+flex: 1;
+    max-width: 900px;
+    width: 100%;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(8, 109, 139, 0.05);
 }
